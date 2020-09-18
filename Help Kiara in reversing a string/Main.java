@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char str[100], rev[100];
+	int count = 0, end, i;
+	std::cin.getline(str, 100);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		count++;
+	}
+	end = count;
+	for (i = 0; i <= end; i++)
+	{
+		if (i == end)
+		{
+			rev[i] = '\0';
+		}
+		else
+			rev[i] = str[count - 1];
+			count--;
+	}
+	std::cout << rev;
+}
